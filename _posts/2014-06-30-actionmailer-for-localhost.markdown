@@ -71,7 +71,7 @@ class WelcomeMailer < ActionMailer::Base
 end
 {% endhighlight %}
 
-We’re going to need a method to call to get the email ready so let’s add that.  I called mine `welcome_email` and I take one param, user (which is my new user object).  I also set a few Class level instance variables to pass down some additional information to my view (aka template in the case of our mail).  `@user` will contain the new user record object and `@url` is a url back to your site.
+We’re going to need a method to call to get the email ready so let’s add that.  I called mine `welcome_email` and I take one param, user (which is my new user object from #create).  I also set a few Class level instance variables to pass down some additional information to my view (aka template in the case of our mail).  `@user` will contain the new user record object and `@url` is a url back to your site.
 
 {% highlight ruby %}
 class WelcomeMailer < ActionMailer::Base
