@@ -119,10 +119,10 @@ This next step is really important.  Open your .gitignore file and add this line
 
 Then git add and commit.  Navigate to your config/secrets.yml file and add the following under development:
 
-{% highlight bash %}
-super_secret_username: ‘your mail provider username’
-super_secret_password: ‘your mail provider password’
-super_secret_domain: ‘your send from domain’
+{% highlight ruby %}
+super_secret_username: 'your mail provider username'
+super_secret_password: 'your mail provider password'
+super_secret_domain: 'your send from domain'
 {% endhighlight %}
 
 Run git status, notice that your secrets.yml file isn’t part of the tracked changes anymore, this is crucial if you push to Github.  You definitely do not want to git push the secrets.yml file with sensitive info.  Epic fail, be careful.
