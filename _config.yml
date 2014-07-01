@@ -10,12 +10,12 @@ url:              http://simplegrowth.github.io/
 owner:
   name:           Chad
   avatar:         avatar.jpg
-  bio:            "A web developer for over 10 years, my current focus is learning rails and developing tutorials to help others along the same journey."
-  email:          chad@codingbythebeach.ca
+  bio:            "A web developer for over 10 years, my current focus is rails and developing tutorials to help others along the same journey."
+  # email:          chad@codingbythebeach.ca
   # Social networking links used in footer. Update and remove as you like.
   # twitter:
   # facebook:
-  github: https://github.com/chadcodes
+  github: https://github.com/simpleGrowth
   # stackexchange:
   # linkedin:
   # instagram:
@@ -36,10 +36,10 @@ bing_verify:
 # Links to include in top navigation
 # For external links add external: true
 links:
-  - title: Theme Setup
-    url: /theme-setup
-  - title: External Link
-    url: http://mademistakes.com
+  # - title: Theme Setup
+  #   url: /theme-setup
+  # - title: External Link
+  #   url: http://mademistakes.com
     external: true
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
