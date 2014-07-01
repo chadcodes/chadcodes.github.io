@@ -13,7 +13,7 @@ Action Mailer by default sends a multipart email (HTML and plain text) which is 
 [mandrill]: http://mandrill.com/
 [heroku]: https://addons.heroku.com/#email-sms
 
-> You can use your Gmail account I’m going to caution against it.  You should protect your Gmail with [2FA][google-2fa] at a minimum and [App specific passwords][google-apppass] for something like this.  Still, don’t do it unless you have a good reason.)
+> You can use your Gmail account but I’m going to caution against it.  You should protect your Gmail with [2FA][google-2fa] at a minimum and [App specific passwords][google-apppass] for something like this.  Still, don’t do it unless you have a good reason.
 
 [google-2fa]: https://support.google.com/accounts/answer/180744?hl=en
 [google-apppass]: https://support.google.com/accounts/answer/185833?hl=en
