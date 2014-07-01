@@ -135,7 +135,7 @@ You’ll need to reload your rails environment to see the new changes so kill yo
 
 If everything looks good, git commit.
 
-Run your server and test it out.  If everything’s good you project should be sending email now.  If you don’t get emails or something isn’t working check your log and/or pry into whatever part of the chain broke for you.  Pry is a great tool and should give you enough info to figure out your next steps.
+Run your server and test it out.  If everything’s good you should be sending email now.  If you don’t get emails or something isn’t working check your log and/or pry into whatever part of the chain broke for you.  Pry is a great tool and should give you enough info to figure out your next steps.
 
 
 
