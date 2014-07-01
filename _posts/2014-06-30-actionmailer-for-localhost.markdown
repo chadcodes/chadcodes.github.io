@@ -55,7 +55,7 @@ Rails.application.routes.draw do
 end
 {% endhighlight %}
 
-I prefer to _route_ the root to our users#welcome page and users#create will be our POST location.  There will be no validation on the form and no edit, destroy or show actions for simplicity.  My user controller has been configured to #create on the POST action and save to the database, simple.  Success or fail the controller just redirects with a simple flash notice on root (users#welcome).  Go ahead and test out everything to make sure it’s working as intended.  All good?  Time to git.
+I prefer to _route_ the root to our site users#welcome page and users#create will be our POST location.  There will be no validation on the form and no edit, destroy or show actions for simplicity.  My user controller has been configured to #create on the POST action and save to the database, simple.  Success or fail the controller just redirects with a simple flash notice on root (users#welcome).  Go ahead and test out everything to make sure it’s working as intended.  All good?  Time to git.
 
 Next we generate our mailer:
 
