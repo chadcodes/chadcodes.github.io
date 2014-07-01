@@ -57,6 +57,30 @@ end
 
 I prefer to _route_ the root of our site to users#welcome page and users#create will be our POST location.  There will be no validation on the form and no edit, destroy or show actions for simplicity.  My user controller has been configured to #create on the POST action and save to the database, simple.  Success or fail the controller just redirects with a simple flash notice on root (users#welcome).  Go ahead and test out everything to make sure it’s working as intended.  All good?  Time to git.
 
+{% highlight ruby %}
+class UsersController < ApplicationController
+  def welcome
+    @user = User.new
+    @users = User.all
+  end
+
+  def create
+    @user = User.new(user_params)
+    if @user.save
+      WelcomeMailer.welcome_email(@user).deliver
+      redirect_to root_path, notice: 'Account created.  Email sent.'
+    else
+      redirect_to root_path, notice: 'Something bad happened, try again.'
+    end
+  end
+
+  private
+    def user_params
+      params.require(:user).permit(:name, :email)
+    end
+end
+{% endhighlight %}
+
 Next we generate our mailer:
 
 {% highlight bash %}
