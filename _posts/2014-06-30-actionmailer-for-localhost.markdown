@@ -49,12 +49,10 @@ $ rails g controller Users welcome create --no-assets —-no-helper
 Make a quick change to config/routes.rb like this:
 
 {% highlight ruby %}
-.
-..
-resources :users, :only => [:create]
-root to: "users#welcome"
-..
-.
+Rails.application.routes.draw do
+  resources :users, :only => [:create]
+  root to: "users#welcome"
+end
 {% endhighlight %}
 
 I prefer to route the root to our users#welcome page and users#create will be our POST location.  There will be no validation on the form and no edit, destroy or show actions for simplicity.  My user controller has been configured to #create on the POST action and save to the database, simple.  Success or fail the controller just redirects with a simple flash notice on root (users#welcome).  Go ahead and test out everything to make sure it’s working as intended.  All good?  Time to git.
@@ -67,13 +65,23 @@ $ rails g mailer welcome_mailer
 
 This will create a file and a new folder in your views.  Let’s take a quick look at the new file welcome_mailer.rb.  Nothing much going on here but feel free to change the default from: to whatever from email you want.
 
+{% highlight ruby %}
+class WelcomeMailer < ActionMailer::Base
+  default from: "hello@mysite.com"
+end
+{% endhighlight %}
+
 We’re going to need a method to call to get the email ready so let’s add that.  I called mine `welcome_email` and I take one param, user (which is my new user object).  I also set a few Class level instance variables to pass down some additional information to my view (aka template in the case of our mail).  `@user` will contain the new user record object and `@url` is a url back to your site.
 
 {% highlight ruby %}
-def welcome_email(user)
-  @user = user
-  @url  = 'http://test.com/login'
-  mail(to: @user.email, subject: 'My awesome email')
+class WelcomeMailer < ActionMailer::Base
+  default from: "hello@mysite.com"
+
+  def welcome_email(user)
+    @user = user
+    @url  = 'http://test.com/login'
+    mail(to: @user.email, subject: 'My awesome email')
+  end
 end
 {% endhighlight %}
 
