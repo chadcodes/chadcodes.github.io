@@ -3,6 +3,7 @@ layout: post
 title:  "Configuring Action Mailer on your Development environment"
 date:   2014-06-30 08:00:00
 categories: rails actionmailer
+tags: [rails, actionmailer, mandrill]
 ---
 
 This article will help you get up and running with Action Mailer on your local machine.  A follow up post will cover deploying to Heroku.
