@@ -119,7 +119,7 @@ super_secret_domain: ‘your send from domain’
 
 Run git status, notice that your secrets.yml file isn’t part of the tracked changes anymore, this is crucial if you push to Github.  You definitely do not want to git push the secrets.yml file with sensitive info.  Epic fail, be careful.
 
-![faceplam]({{ site.baseurl }}public/images/facepalm.png)
+![faceplam]({{ site.baseurl }}images/facepalm.jpg)
 
 This next step tripped me up a little and made me pause for a rubber ducky moment.  When your rails environment loads you need to make sure to pull in the secrets.yml file.  This doesn't happen by default but a quick search led me to an [article][quickleft] explaining this.
 
