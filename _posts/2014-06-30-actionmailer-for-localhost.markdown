@@ -18,7 +18,7 @@ Action Mailer by default sends a multipart email (HTML and plain text) which is 
 [google-2fa]: https://support.google.com/accounts/answer/180744?hl=en
 [google-apppass]: https://support.google.com/accounts/answer/185833?hl=en
 
-I recommend starting a new rails project to see how this works before adding a mailer to an ongoing project.  Let’s get started, pop into your CLI and type:
+I recommend starting a new rails project to see how this works before adding a mailer to an ongoing project.  Let’s get started, jump into your CLI and type:
 
 {% highlight bash %}
 $ rails new actionamiler -T
