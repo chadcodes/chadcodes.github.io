@@ -24,7 +24,7 @@ I recommend starting a new rails project to see how this works before adding a m
 $ rails new actionamiler -T
 {% endhighlight %}
 
-(-T doesn’t add the test framework which we won’t need)
+>-T doesn’t add the test framework which we won’t need
 
 Next, `cd` into your new folder, `git init`, `git add --all` and `git commit -m “Initial commit”` (practice makes perfect with git).
 
