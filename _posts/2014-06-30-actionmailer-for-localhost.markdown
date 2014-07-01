@@ -8,17 +8,17 @@ tags: [rails, actionmailer, mandrill]
 
 This article will help you get up and running with Action Mailer on your local machine.  A follow up post will cover deploying to Heroku.
 
-Action Mailer by default sends a multipart email (HTML and plain text) which is great.  Typically you should always send this way unless you have a specific use case.  I prefer to use a third-party provider for the sending step and I recommend the same for you.  For this project I wanted to test out [Mandrill][mandrill] but feel free to use whatever provider you want.  SendGrid and Mailgun are excellent, both with a free tier and Heroku has a good list of providers [here][heroku].
+Action Mailer by default sends a multipart email (HTML and plain text) which is perfect.  You should always send this way unless you have a specific use case.  I prefer to use a third-party provider for the sending step and I recommend the same.  For this project I wanted to test out [Mandrill][mandrill] but feel free to use whatever provider you want.  SendGrid and Mailgun are excellent, both offer a free tier but if you want to look around, Heroku has a good list of providers [here][heroku].
 
 [mandrill]: http://mandrill.com/
 [heroku]: https://addons.heroku.com/#email-sms
 
-(While you can use Gmail I’m going to caution against it.  You should protect your Gmail heavily, [2FA][google-2fa] at a minimum and [App specific passwords][google-apppass] for something like this.  Still, don’t do it unless you have a good reason.)
+(You can use your Gmail account I’m going to caution against it.  You should protect your Gmail with [2FA][google-2fa] at a minimum and [App specific passwords][google-apppass] for something like this.  Still, don’t do it unless you have a good reason.)
 
 [google-2fa]: https://support.google.com/accounts/answer/180744?hl=en
 [google-apppass]: https://support.google.com/accounts/answer/185833?hl=en
 
-I recommend starting a new project to see how it all works before adding this to your project.  Let’s get started, pop into your CLI and type:
+I recommend starting a new rails project to see how this works before adding a mailer to an ongoing project.  Let’s get started, pop into your CLI and type:
 
 {% highlight bash %}
 $ rails new actionamiler -T
@@ -26,7 +26,7 @@ $ rails new actionamiler -T
 
 (-T doesn’t add the test framework which we won’t need)
 
-Next cd into your new folder, git init, git add --all, git commit -m “Initial commit” (practice makes perfect with git).
+Next, `cd` into your new folder, `git init`, `git add --all` and `git commit -m “Initial commit”` (practice makes perfect with git).
 
 Let’s start with a quick User model like so:
 
@@ -40,7 +40,7 @@ First things first, check your migration!  Make sure you didn’t fat finger any
 $ rails db:migrate
 {% endhighlight %}
 
-Git commit.  Let’s go ahead and create a quick controller so we can create a signup page.  Welcome and create are the only pages needed for this test.  I’m using the —-no-assets and —-no-helper option here because I don’t need the extra files.
+`Git commit`.  Let’s go ahead and create a quick controller so we can create a signup page.  Welcome and create are the only pages needed for this test.  I’m using the —-no-assets and —-no-helper option here because I don’t need the extra files.
 
 {% highlight bash %}
 $ rails g controller Users welcome create --no-assets —-no-helper
@@ -67,7 +67,7 @@ $ rails g mailer welcome_mailer
 
 This will create a file and a new folder in your views.  Let’s take a quick look at the new file welcome_mailer.rb.  Nothing much going on here but feel free to change the default from: to whatever from email you want.
 
-We’re going to need a method to call to get the email ready so let’s add that.  I called mine welcome_email and I take one param, user (which is my new user object).  I also set a few Class level instance variables to pass down some additional information to my view (aka template in the case of our mail).  @user will contain the new user record object and @url is a url back to the site.
+We’re going to need a method to call to get the email ready so let’s add that.  I called mine `welcome_email` and I take one param, user (which is my new user object).  I also set a few Class level instance variables to pass down some additional information to my view (aka template in the case of our mail).  @user will contain the new user record object and @url is a url back to the site.
 
 {% highlight ruby %}
 def welcome_email(user)
