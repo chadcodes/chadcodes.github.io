@@ -125,7 +125,7 @@ super_secret_password: 'your mail provider password'
 super_secret_domain: 'your send from domain'
 {% endhighlight %}
 
-Run `git status`, notice that your secrets.yml file isn’t part of the tracked changes anymore, this is crucial if you push to Github.  You definitely do not want to git push the secrets.yml file with sensitive info.  Epic fail, be careful.
+Run `git status`, notice that your secrets.yml file isn’t part of the tracked changes anymore, this is crucial if you push to Github.  You definitely do not want to git push the secrets.yml file with sensitive info.  **Epic fail, be careful**.
 
 ![faceplam]({{ site.baseurl }}images/facepalm.jpg)
 
