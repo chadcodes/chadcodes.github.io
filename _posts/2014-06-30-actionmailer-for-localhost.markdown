@@ -115,7 +115,7 @@ The last line of the method above will return a `Mail::Message` object which can
 
 Let’s create 2 new files for the HTML and text version of the email.  These files go in app/views/welcome_mailer and I’ve called them welcome_email.html.erb and welcome_email.text.erb.  They should match the method `welcome_email` in your `WelcomeMailer` class so name things appropriately here.
 
-If you’re still following, take a quick break to `git`, grab a coffee and stretch.  The next step is to configure your smtp settings and add in your smtp user/pass to the secrets.yml file then test.
+If you’re still following, take a quick break to `git`, grab a coffee and stretch.  The next step is to configure your smtp settings, add in your smtp user/pass to the secrets.yml file and test.
 
 Navigate to your config/environments/development.rb file and add the following before the end:
 
