@@ -63,7 +63,7 @@ Next we generate our mailer:
 $ rails g mailer welcome_mailer
 {% endhighlight %}
 
-This will create a file and a new folder in your views.  Let’s take a quick look at the new file welcome_mailer.rb.  Nothing much going on here but feel free to change the default from: to whatever from email you want.
+This will create a file in app/mailers/ and a new folder in your views.  Let’s take a quick look at the new file welcome_mailer.rb.  Nothing much going on here but feel free to change the default from: to whatever from email you want.
 
 {% highlight ruby %}
 class WelcomeMailer < ActionMailer::Base
