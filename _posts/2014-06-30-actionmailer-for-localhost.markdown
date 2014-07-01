@@ -67,7 +67,7 @@ $ rails g mailer welcome_mailer
 
 This will create a file and a new folder in your views.  Let’s take a quick look at the new file welcome_mailer.rb.  Nothing much going on here but feel free to change the default from: to whatever from email you want.
 
-We’re going to need a method to call to get the email ready so let’s add that.  I called mine `welcome_email` and I take one param, user (which is my new user object).  I also set a few Class level instance variables to pass down some additional information to my view (aka template in the case of our mail).  @user will contain the new user record object and @url is a url back to the site.
+We’re going to need a method to call to get the email ready so let’s add that.  I called mine `welcome_email` and I take one param, user (which is my new user object).  I also set a few Class level instance variables to pass down some additional information to my view (aka template in the case of our mail).  `@user` will contain the new user record object and `@url` is a url back to your site.
 
 {% highlight ruby %}
 def welcome_email(user)
@@ -77,11 +77,11 @@ def welcome_email(user)
 end
 {% endhighlight %}
 
-The last line of the method above will return a Mail::Message object which can then be triggered to send with the deliver method.
+The last line of the method above will return a `Mail::Message` object which can then be triggered to send with the `deliver` method.
 
 Let’s create 2 new files for the HTML and text version of the email.  These files go in app/views/welcome_mailer and I’ve called them welcome_email.html.erb and welcome_email.text.erb.  They should match your mailer class so name things appropriately here.
 
-If you’re still following, take a quick break to git commit, coffee and stretch.  Next steps are the configure the mailer smtp settings, add in your mail password to the secrets.yml file then test.
+If you’re still following, take a quick break to `git`, coffee and stretch.  Next steps are the configure the mailer smtp settings, add in your mail password to the secrets.yml file then test.
 
 Navigate to your config/environments/development.rb file and add the following before the end:
 
@@ -100,7 +100,7 @@ config.action_mailer.smtp_settings = {
 }
 {% endhighlight %}
 
-Your information above may be slightly different depending on the email provider you’re using.  DO NOT put your username or password for your email provider here, instead use ENV[‘super_secret_username’], ENV[‘super_secret_password’].  Since we’re here we might as well remove the domain to a secret as well ENV[‘super_secret_domain’].  I’ll explain this in one minute.  Git now.
+Your information above may be slightly different depending on the email provider you’re using.  DO NOT put your username or password for your email provider here, instead use `ENV[‘super_secret_username’]`, `ENV[‘super_secret_password’]`.  Since we’re here we might as well remove the domain to a secret as well `ENV[‘super_secret_domain’]`.  I’ll explain this in one minute.  Git now.
 
 This next step is really important.  Open your .gitignore file and add this line:
 
@@ -131,7 +131,7 @@ Add this line to your config/application.rb file:
 ENV.update YAML.load_file('config/secrets.yml')[Rails.env] rescue {}
 {% endhighlight %}
 
-You’ll need to reload your rails environment to see the new changes so kill your server and run it again.  Let’s jump into the rails console to see if the secrets.yml loaded up for us.  Inside your console type ENV and you should get a big long hash.  Somewhere in there is going to be your secret variables, if not something went wrong.  Retrace your steps and make sure you can see that in your ENV hash.
+You’ll need to reload your rails environment to see the new changes so kill your server and run it again.  Let’s jump into the rails console to see if the secrets.yml loaded up for us.  Inside your console type `ENV` and you should get a big long hash.  Somewhere in there is going to be your secret variables, if not, something went wrong.  Retrace your steps and make sure you can see that in your ENV hash.
 
 If everything looks good, git commit.
 
