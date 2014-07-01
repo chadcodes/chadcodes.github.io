@@ -40,7 +40,7 @@ First things first, check your migration!  Make sure you didn’t fat finger any
 $ rails db:migrate
 {% endhighlight %}
 
-`Git commit`.  Let’s go ahead and create a quick controller so we can create a signup page.  Welcome and create are the only pages needed for this test.  I’m using the —-no-assets and —-no-helper option here because I don’t need the extra files.
+Git time.  Let’s go ahead and create a quick controller so we can create a signup page.  Welcome and create are the only pages needed for this test.  I’m using the —-no-assets and —-no-helper option here because I don’t need the extra files.
 
 {% highlight bash %}
 $ rails g controller Users welcome create --no-assets —-no-helper
