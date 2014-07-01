@@ -113,7 +113,7 @@ end
 
 The last line of the method above will return a `Mail::Message` object which can then be triggered to send with the `deliver` method.
 
-Let’s create 2 new files for the HTML and text version of the email.  These files go in app/views/welcome_mailer and I’ve called them welcome_email.html.erb and welcome_email.text.erb.  They should match the method 'welcome_email' in your 'WelcomeMailer' class so name things appropriately here.
+Let’s create 2 new files for the HTML and text version of the email.  These files go in app/views/welcome_mailer and I’ve called them welcome_email.html.erb and welcome_email.text.erb.  They should match the method `welcome_email` in your `WelcomeMailer` class so name things appropriately here.
 
 If you’re still following, take a quick break to `git`, coffee and stretch.  Next steps are the configure the mailer smtp settings, add in your mail password to the secrets.yml file then test.
 
