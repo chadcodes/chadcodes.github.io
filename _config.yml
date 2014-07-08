@@ -10,12 +10,12 @@ url:              http://chadcodes.github.io
 owner:
   name:           Chad
   avatar:         avatar.jpg
-  bio:            "A web designer and developer for over 15 years, my current focus is reinventing myself as a rails developer and writing tutorials to help others along the same journey."
+  bio:            "Working with the web for over 15 years, my current focus is Rails and writing for this blog."
   email:          chad@simplegrowth.ca
   # Social networking links used in footer. Update and remove as you like.
-  # twitter:
+  twitter: chadscoding
   # facebook:
-  github: simpleGrowth
+  github: chadcodes
   # stackexchange:
   # linkedin:
   # instagram:
