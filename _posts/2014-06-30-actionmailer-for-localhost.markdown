@@ -21,7 +21,7 @@ Action Mailer by default sends a multipart email (HTML and plain text) which is 
 I recommend starting a new rails project to see how this works before adding a mailer to an ongoing project.  Let’s get started, jump into your CLI and type:
 
 {% highlight bash %}
-$ rails new actionamiler -T
+$ rails new actionmailer -T
 {% endhighlight %}
 
 >-T doesn’t add the test framework which we won’t need, this is optional.

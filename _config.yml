@@ -1,17 +1,17 @@
 title:            Coding by the Beach
-description:      You'll find tips and tricks I've found while learning Ruby and Rails.
+description:      Thoughts and code from Toronto's east side.
 # disqus_shortname:
 reading_time:     true
 words_per_minute: 200
 #Your site's domain goes here. Leave localhost server or blank when working locally.
-url:              http://chadcodes.github.io
+url:              http://www.codingbythebeach.com/
 
 # Owner/author information
 owner:
-  name:           Chad
+  name:           Coding by the Beach
   avatar:         avatar.jpg
-  bio:            "Working with the web for over 15 years, my current focus is Rails and writing for this blog."
-  email:          chad@simplegrowth.ca
+  bio:            "Passionate about building for the web. Working with open source technology.  And solving problems."
+  email:          hello@codingbythebeach.com
   # Social networking links used in footer. Update and remove as you like.
   twitter: chadscoding
   # facebook:
@@ -28,7 +28,7 @@ owner:
 background:
 
 # Analytics and webmaster tools stuff goes here
-google_analytics:
+google_analytics: UA-52727008-1
 google_verify:
 # https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
 bing_verify:

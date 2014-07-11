@@ -1,1 +1,1 @@
-This is the personal website of Chad Ridgway, hosted by GitHub Pages.  You can find it at simplegrowth.github.io
+This is the personal website of Chad, hosted by GitHub Pages.
